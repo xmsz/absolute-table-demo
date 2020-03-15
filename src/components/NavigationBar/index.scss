@@ -1,0 +1,79 @@
+.navigation_bar {
+  position: fixed;
+  z-index: $popup-zindex;
+  left: 0;
+  top: 0;
+  width: 100%;
+  transition: background 0.25s ease-in;
+}
+
+.navigation_bar-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  .capsule {
+    flex-shrink: 0;
+  }
+}
+
+.navigation_bar-default-content {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.btn-back {
+  position: absolute;
+  z-index: 1;
+  left: 15px;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  width: 88px;
+  height: 88px;
+  border-radius: 100px;
+  transform: translate3d(0, -50%, 0);
+}
+.btn-back-icon {
+  color: #000;
+  transform: rotate(180deg) scale(0.6);
+  transform-origin: 50%;
+}
+
+.navigation_bar-title {
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  font-size: 32px;
+  color: #000;
+  font-weight: bold;
+  line-height: 1.5;
+
+  transform: translate3d(0, -50%, 0);
+  transform-origin: 50%;
+}
+
+.navigation_bar-placeholder {
+  height: 126px;
+}
+.navigation_bar-placeholder-hide {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.navigation_bar-theme-transparent {
+  .btn-back-icon {
+    color: #fff;
+  }
+}

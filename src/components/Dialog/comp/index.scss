@@ -1,0 +1,227 @@
+.com-dialog {
+  position: fixed;
+  z-index: $popup-zindex;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  &-mask {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(203, 203, 203, 0.7);
+    opacity: 1;
+  }
+  &-box {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    width: 520px;
+    background: #fff;
+    border-radius: 25px;
+    transform: translate3d(-50%, -50%, 0);
+    min-height: 200px;
+  }
+  &-footer {
+    position: relative;
+    z-index: 1;
+    margin: 50px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &-title {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 1.5;
+    padding: 40px 0 0;
+    margin: 0 80px;
+    text-align: center;
+  }
+  &-content {
+    font-size: 28px;
+    padding: 20px 0 0;
+    margin: 0 70px 40px;
+    text-align: center;
+    line-height: 1.5;
+    word-break: break-all;
+    white-space: pre-wrap;
+    pre {
+      text-align: left;
+      word-break: break-all;
+      white-space: pre-wrap;
+    }
+    .small-text {
+      font-size: 20px;
+    }
+    .qrcode {
+      display: block;
+      width: 100%;
+      border: 2px solid #eaeaea;
+      background: #eaeaea;
+    }
+  }
+  &-button {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 32px;
+    line-height: 1.5;
+    font-weight: bold;
+    user-select: none;
+    border-radius: 50px;
+    &.submit {
+      color: #fff;
+    }
+    &:active {
+      opacity: 1;
+    }
+    &.cancel {
+      font-weight: normal;
+    }
+  }
+  // 动画相关
+  &-mask {
+    opacity: 0;
+    animation: bwui-dialog-mask-show 0.3s forwards;
+    @keyframes bwui-dialog-mask-show {
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+  &-box {
+    transform: translate3d(-50%, -60%, 0) scale(0.9);
+    opacity: 0;
+    animation: bwui-dialog-box-show 0.5s ease-out forwards;
+    @keyframes bwui-dialog-box-show {
+      50% {
+        opacity: 0;
+        transform: translate3d(-50%, -60%, 0) scale(0.9);
+      }
+      75% {
+        opacity: 1;
+        transform: translate3d(-50%, -60%, 0) scale(1.05);
+      }
+      100% {
+        opacity: 1;
+        transform: translate3d(-50%, -60%, 0) scale(1);
+      }
+    }
+  }
+
+  &.fade-leave-active {
+    animation: com-dialog-leave-active 0.6s;
+    .com-dialog-mask {
+      opacity: 1;
+      animation: com-dialog-mask-leave 0.3s 0.3s ease-in forwards;
+      @keyframes com-dialog-mask-leave {
+        100% {
+          opacity: 0;
+        }
+      }
+    }
+
+    .com-dialog-box {
+      opacity: 1;
+      transform: translate3d(-50%, -60%, 0) scale(1);
+      animation: com-dialog-box-leave 0.3s ease-in forwards;
+      @keyframes com-dialog-box-leave {
+        0% {
+          opacity: 1;
+          transform: translate3d(-50%, -60%, 0) scale(1);
+        }
+        50% {
+          opacity: 1;
+          transform: translate3d(-50%, -60%, 0) scale(1.1);
+        }
+        75% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+          transform: translate3d(-50%, -60%, 0) scale(0.9);
+        }
+      }
+    }
+  }
+  @keyframes com-dialog-leave-active {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+.com-dialog {
+  $mask_bg: rgba(#222, 0.8);
+  $fc-1: $color-title;
+  $color-sub-title: $color-paragraph;
+  $fc-3: $color-secondary;
+  $bg-1: #e0e0e0;
+  $bg-2: #f2f2f2;
+  $bg-3: #f8f8f8;
+  $brand-primary: $brand-primary; // 背景颜色
+  $brand-primary-tap: $brand-primary-tap; // 阴影及active背景色
+  $c_submit: #fff; // 确认按钮 颜色
+  $c_submit_active: $brand-primary-tap; // 确认按钮 颜色
+  $c_cancel_active: #f2f2f2; // 按钮active背景
+  &-mask {
+    background: $mask_bg;
+  }
+  &-title {
+    color: $fc-1;
+    font-weight: bold;
+  }
+  &-content {
+    color: $color-sub-title;
+  }
+  &-footer {
+    display: block;
+    &::before {
+      display: none;
+    }
+  }
+  &-button {
+    font-size: 26px;
+    border-radius: 0;
+    width: initial;
+    transition: transform 0.3s ease-out;
+    padding: 15px 0;
+    &.cancel {
+      color: $fc-3;
+      background: $bg_3;
+      border-radius: 100px;
+      margin: -10px 0 0 0;
+      &:active {
+        background: $c_cancel_active;
+      }
+      &.first {
+        display: none;
+      }
+      &.second {
+        display: block;
+        border-radius: 0 0 20px 20px;
+      }
+    }
+    &.submit {
+      background: $brand-primary;
+      margin: 0 30px 30px;
+      color: $c_submit;
+      border-radius: 100px;
+      box-shadow: 0 5px 20px rgba($brand-primary-tap, 0.3);
+      &:active {
+        background: $c_submit_active;
+        transform: translate3d(0, 2px, 0);
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+@import './mixins/hairline';
+@import './mixins/radius';
+@import './mixins/font';
+@function strip-units($number) {
+  @return $number / ($number * 0 + 1);
+}

@@ -1,0 +1,68 @@
+// prettier-ignore
+$hd: 1px; // 基础单位
+
+// 色彩
+// ---
+// 文字色
+
+$color-title: #21242a;
+$color-sub-title: #37352f;
+$color-paragraph: #4e565d;
+$color-caption: #7b838a;
+$color-secondary: #9ca0a9;
+$color-placeholder: #c8d1da;
+
+$color-text-base: #000;
+$color-text-base-inverse: #fff;
+$color-text-button-inverse: #fff;
+
+// 边框色
+$border-color-base: #dbdcdf;
+
+// 背景色
+$fill-base: #fff;
+$fill-body: #f5f6f8;
+
+// 品牌色
+$brand-primary: #295dff;
+$brand-primary-tap: #352bfe;
+$brand-primary-shadow: #271de6;
+$brand-success: #6abf47;
+$brand-warning: #ffc600;
+$brand-error: #f4333c;
+$brand-important: #ff5b05;
+
+// 间距
+// ---
+// 水平间距
+$h-spacing-sm: 10 * $hd;
+$h-spacing-md: 16 * $hd;
+$h-spacing-lg: 30 * $hd;
+
+// 按钮
+$button-height: 94 * $hd;
+$button-font-size: 36 * $hd;
+
+$button-sm-height: 60 * $hd;
+$button-sm-font-size: 26 * $hd;
+
+$button-fill-active: $border-color-base;
+
+$primary-button-fill: $brand-primary;
+$primary-button-fill-tap: $brand-primary-tap;
+
+// 圆角
+// ---
+$radius-xs: 4 * $hd;
+$radius-sm: 6 * $hd;
+$radius-md: 10 * $hd;
+$radius-lg: 14 * $hd;
+$radius-circle: 50%;
+$radius-form: 20 * $hd;
+
+// z-index
+$popup-zindex: 999;
+$bottom-tip-zindex: 998;
+$modal-zindex: 999;
+$toast-zindex: 1999;
+$tabs-zindex: 998;

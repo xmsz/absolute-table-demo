@@ -1,0 +1,258 @@
+@font-face {
+  font-family: 'base_icon'; /* project id 1146833 */
+  src: url('//at.alicdn.com/t/font_1146833_ycpcwr08ak.eot');
+  src: url('//at.alicdn.com/t/font_1146833_ycpcwr08ak.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_1146833_ycpcwr08ak.woff2') format('woff2'),
+    url('//at.alicdn.com/t/font_1146833_ycpcwr08ak.woff') format('woff'),
+    url('//at.alicdn.com/t/font_1146833_ycpcwr08ak.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_1146833_ycpcwr08ak.svg#base_icon') format('svg');
+}
+.base-icon-font-loading:before {
+  content: '\e738';
+  font-family: 'base_icon';
+}
+
+.base-icon-font-warn:before {
+  content: '\e606';
+  font-family: 'base_icon';
+}
+
+.base-icon-font-refresh {
+  &::before {
+    content: '\e6ab';
+    font-family: 'base_icon';
+  }
+}
+
+.base-icon-font-done {
+  &::before {
+    content: '\e632';
+    font-family: 'base_icon';
+  }
+}
+
+.base-icon-font-setting:before {
+  content: '\e615';
+  font-family: 'base_icon';
+}
+
+.base-icon-font-setting-bg:before {
+  content: '\e627';
+  font-family: 'base_icon';
+}
+
+.base-icon-font-arrow-down {
+  &::before {
+    content: '\e709';
+    font-family: 'base_icon';
+  }
+}
+
+.base-icon-font-speed-up {
+  &::before {
+    content: '\e63c';
+    font-family: 'base_icon';
+  }
+}
+
+.base-icon-font-upgrade {
+  &::before {
+    content: '\e7e2';
+    font-family: 'base_icon';
+  }
+}
+
+.base-icon-font-broadcast {
+  &::before {
+    content: '\e610';
+    font-family: 'base_icon';
+  }
+}
+
+.base-icon-font-close {
+  &::before {
+    content: '\e732';
+    font-family: 'base_icon';
+  }
+}
+
+.base-icon-font-close-round {
+  &::before {
+    content: '\e634';
+    font-family: 'base_icon';
+  }
+}
+
+.base-icon-font-video {
+  &::before {
+    content: '\e788';
+    font-family: 'base_icon';
+  }
+}
+.base-icon-font-next {
+  &::before {
+    content: '\e71c';
+    font-family: 'base_icon';
+  }
+}
+
+.base-icon-font-share-2 {
+  &::before {
+    content: '\e654';
+    font-family: 'base_icon';
+  }
+}
+
+.base-icon-font-send {
+  &::before {
+    content: '\e656';
+    font-family: 'base_icon';
+  }
+}
+
+.base-icon-font-info {
+  &::before {
+    content: '\e650';
+    font-family: 'base_icon';
+  }
+}
+
+.base-icon-font-next-2 {
+  &::before {
+    content: '\e8a4';
+    font-family: 'base_icon';
+  }
+}
+
+.base-icon-font-share {
+  &::before {
+    content: '\e639';
+    font-family: 'base_icon';
+  }
+}
+
+.base-icon-font-copy {
+  &::before {
+    content: '\e63e';
+    font-family: 'base_icon';
+  }
+}
+
+.base-icon-font-qq {
+  &::before {
+    content: '\ebed';
+    font-family: 'base_icon';
+  }
+}
+
+.base-icon-font-transport {
+  &::before {
+    content: '\e661';
+    font-family: 'base_icon';
+  }
+}
+
+.base-icon-font-sexual-girl {
+  &::before {
+    content: '\e80c';
+    font-family: 'base_icon';
+  }
+}
+
+.base-icon-font-sexual-boy {
+  &::before {
+    content: '\e68b';
+    font-family: 'base_icon';
+  }
+}
+
+.base-icon-font-like {
+  &::before {
+    content: '\e611';
+    font-family: 'base_icon';
+  }
+}
+
+.base-icon-font-cancel-bold {
+  &::before {
+    content: '\e607';
+    font-family: 'base_icon';
+  }
+}
+.base-icon-font-filter {
+  &::before {
+    content: '\e64e';
+    font-family: 'base_icon';
+  }
+}
+.base-icon-font-back {
+  &::before {
+    content: '\e604';
+    font-family: 'base_icon';
+  }
+}
+.base-icon-font-date {
+  &::before {
+    content: '\e617';
+    font-family: 'base_icon';
+  }
+}
+.base-icon-font-birthday {
+  &::before {
+    content: '\e6bb';
+    font-family: 'base_icon';
+  }
+}
+.base-icon-font-take-photo {
+  &::before {
+    content: '\e63b';
+    font-family: 'base_icon';
+  }
+}
+.base-icon-font-photo {
+  &::before {
+    content: '\e673';
+    font-family: 'base_icon';
+  }
+}
+.base-icon-font-wechat {
+  &::before {
+    content: '\e88d';
+    font-family: 'base_icon';
+  }
+}
+
+.base-icon-font-emoji-bg {
+  &::before {
+    content: '\e608';
+    font-family: 'base_icon';
+  }
+}
+
+.base-icon-font-photo-bg {
+  &::before {
+    content: '\e61b';
+    font-family: 'base_icon';
+  }
+}
+
+.base-icon-font-audio {
+  &::before {
+    content: '\e722';
+    font-family: 'base_icon';
+  }
+}
+
+.base-icon-font-delete-text {
+  &::before {
+    content: '\e609';
+    font-family: 'base_icon';
+  }
+}
+
+.base-icon-font-sending {
+  &::before {
+    content: '\e60b';
+    font-family: 'base_icon';
+  }
+}

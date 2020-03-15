@@ -1,0 +1,40 @@
+.comp-read-pop {
+  width: 600px;
+  height: 65vh;
+  background: #e7ecf2;
+  border-radius: 32px;
+  .pop-title {
+    display: block;
+    padding: 24px;
+    height: 32px * 1.5;
+    font-size: 32px;
+    color: $color-title;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: center;
+  }
+  .scroll-view {
+    height: calc(65vh - 290px);
+    padding: 0 48px;
+    box-sizing: border-box;
+    font-size: 26px;
+    color: $color-caption;
+    font-weight: normal;
+    line-height: 1.5;
+  }
+  .pop-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 48px;
+    margin: 64px 0 0 0;
+  }
+  .btn-disagree {
+    width: 100%;
+    background: #dfe3e6;
+    margin: 0 24px 0 0;
+  }
+  .btn-agree {
+    width: 100%;
+  }
+}

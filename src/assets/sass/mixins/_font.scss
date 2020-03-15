@@ -1,0 +1,18 @@
+@mixin Font($size, $color: '', $weight: '', $line-height: ($size * 1.5)) {
+    @if $size < 24px {
+        display: inline-block;
+        font-size: 24px;
+        transform: scale(abs($size / 24px));
+        transform-origin: 0% 50%;
+    }
+    @else {
+        font-size: $size;
+    }
+    @if $color !='' {
+        color: $color;
+    }
+    @if $weight !='' {
+        font-weight: $weight;
+    }
+    line-height: $line-height;
+}

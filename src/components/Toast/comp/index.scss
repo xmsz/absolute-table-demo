@@ -1,0 +1,204 @@
+.com-toast {
+  position: fixed;
+  z-index: $popup-zindex;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  .mask {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(#e7e8e9, 0) 70%, rgba(#343536, 0.7) 100%);
+  }
+
+  .box {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    bottom: 60px;
+    width: 520px;
+    display: flex;
+    align-items: center;
+    padding: 25px 40px;
+    border-radius: 10px;
+    background: $brand-primary;
+    margin: 0 auto;
+    box-sizing: border-box;
+    &.no-content {
+      border-radius: 100px;
+    }
+    &.warn {
+      background: #de9e31;
+    }
+    &.error {
+      background: #ff4d4f;
+    }
+    &.loading {
+      background: #1157ee;
+    }
+    &.done {
+      background: #0cc721;
+    }
+    // &.no-icon {
+    // .text {
+    //   margin: 0 auto;
+    // }
+    //}
+    .details {
+      word-wrap: break-word;
+      word-break: break-all;
+      .summary {
+        margin: 0 0 10px 0;
+      }
+      .p {
+        color: rgba(#fff, 0.8);
+        margin: 0 0 5px 0;
+      }
+    }
+  }
+  .icon {
+    display: block;
+    font-size: 40px;
+    color: #fff;
+    font-weight: normal;
+    line-height: 50px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    &.base-icon-font-loading {
+      animation: com-toast-com-icon-loading-rotate 3s infinite linear;
+      opacity: 0.4;
+      @keyframes com-toast-com-icon-loading-rotate {
+        0% {
+          opacity: 0.4;
+        }
+        50% {
+          opacity: 1;
+          transform: rotate(-360deg);
+        }
+        100% {
+          opacity: 0.4;
+          transform: rotate(-720deg);
+        }
+      }
+    }
+  }
+
+  .text {
+    margin: 0 0 0 20px;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+
+  .title {
+    display: block;
+    font-size: 28px;
+    color: #fff;
+    font-weight: bold;
+    line-height: 1.5;
+  }
+  .desc {
+    margin: 5px 0 0 0;
+    font-size: 20px;
+    color: rgba(#fff, 0.6);
+    font-weight: normal;
+    line-height: 1.5;
+    display: block;
+  }
+
+  .btn-close {
+    position: absolute;
+    z-index: 1;
+    right: 40px;
+    top: 50%;
+    transform: translate3d(0, -50%, 0);
+    width: 42px;
+    height: 42px;
+    border-radius: 100px;
+    background: rgba(0, 0, 0, 0.07);
+    text-align: center;
+    .btn-close-icon {
+      display: inline-block;
+      font-size: 18px;
+      color: rgba(#fff, 0.7);
+      font-weight: normal;
+      line-height: 42px;
+      transform: scale(0.85);
+      transform-origin: 50%;
+    }
+  }
+
+  // 动画相关
+  .mask {
+    opacity: 0;
+    animation: com-toast-mask-show 0.3s 0.1s forwards;
+    @keyframes com-toast-mask-show {
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+  .box {
+    transform: translate3d(0, 200%, 0);
+    opacity: 0;
+    animation: com-toast-box-show 0.4s cubic-bezier(0, 0.47, 0.45, 1.15) forwards;
+    @keyframes com-toast-box-show {
+      75% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+  }
+
+  &.fade-leave-active {
+    animation: com-toast-leave-active 0.6s;
+    .mask {
+      opacity: 1;
+      animation: com-toast-mask-leave 0.3s 0.3s ease-in forwards;
+      @keyframes com-toast-mask-leave {
+        100% {
+          opacity: 0;
+        }
+      }
+    }
+
+    .box {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+      animation: com-toast-box-leave 0.3s ease-in forwards;
+      @keyframes com-toast-box-leave {
+        0% {
+          opacity: 1;
+          transform: translate3d(0, 0, 0);
+        }
+        50% {
+          opacity: 1;
+          transform: translate3d(0, -20px, 0);
+        }
+        75% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+          transform: translate3d(0, 30px, 0);
+        }
+      }
+    }
+  }
+  @keyframes com-toast-leave-active {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
