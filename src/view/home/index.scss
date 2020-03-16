@@ -1,3 +1,46 @@
 #page-home {
   background: #fff;
+  overflow: scroll;
+}
+
+.tb1_table {
+  width: 2000px;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.tb1_table thead {
+  display: block;
+  background: red;
+  color: #fff;
+  width: 2000px;
+  tr {
+    display: flex;
+  }
+  th {
+    width: 100%;
+  }
+}
+
+.dv_table {
+  width: 2000px;
+  height: 100vh;
+  overflow: scroll;
+  overflow-x: hidden;
+  tbody {
+    width: 2000px;
+  }
+  tr {
+    display: flex;
+    width: 2000px;
+    padding: 20px 0;
+    font-size: 32px;
+    color: #000;
+    font-weight: normal;
+    line-height: 1.5;
+  }
+  td {
+    width: 100%;
+    text-align: center;
+  }
 }
