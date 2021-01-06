@@ -11,7 +11,7 @@
   "dependencies": {
     "@coolban/lib-url": "^1.0.4",
     "@vue/composition-api": "^0.4.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "copy-to-clipboard": "^3.2.1",
     "vue": "^2.6.11",
     "vue-axios": "^2.1.5",
